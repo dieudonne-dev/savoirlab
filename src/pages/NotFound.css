@@ -1,0 +1,313 @@
+.notfound-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 50%, #f8fafc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  padding-top: 96px;
+}
+
+.notfound-container {
+  max-width: 640px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ===== VISUAL ===== */
+.notfound-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notfound-number {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.n4 {
+  font-size: 8rem;
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 1;
+  letter-spacing: -4px;
+  text-shadow: 0 8px 32px rgba(22,163,74,0.25);
+}
+
+.n0 {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-light), #bbf7d0);
+  border: 4px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 3s ease-in-out infinite;
+  box-shadow: 0 16px 40px rgba(22,163,74,0.2);
+}
+
+.n0-inner {
+  font-size: 3rem;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ===== CONTENT ===== */
+.notfound-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.notfound-tag {
+  display: inline-block;
+  background-color: #fee2e2;
+  color: #dc2626;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.notfound-content h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--text);
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+}
+
+.notfound-content > p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+/* ===== ACTIONS ===== */
+.notfound-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.btn-back-home {
+  padding: 12px 24px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  background: white;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.btn-back-home:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.btn-home {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  transition: all 0.2s;
+  box-shadow: 0 4px 14px rgba(22,163,74,0.35);
+  display: inline-block;
+}
+
+.btn-home:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(22,163,74,0.45);
+}
+
+/* ===== LIENS UTILES ===== */
+.notfound-links {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.notfound-links > p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.notfound-links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.notfound-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  background-color: white;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  text-align: left;
+  transition: all 0.25s;
+}
+
+.notfound-link:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(22,163,74,0.12);
+}
+
+.notfound-link span {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.notfound-link strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.notfound-link small {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .notfound-page {
+    padding-top: 72px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .notfound-container {
+    gap: 28px;
+  }
+
+  .n4 {
+    font-size: 5.5rem;
+    letter-spacing: -2px;
+  }
+
+  .n0 {
+    width: 90px;
+    height: 90px;
+  }
+
+  .n0-inner {
+    font-size: 2.4rem;
+  }
+
+  .notfound-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .notfound-content > p {
+    font-size: 0.9rem;
+  }
+
+  .notfound-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-back-home,
+  .btn-home {
+    width: 100%;
+    text-align: center;
+    padding: 13px;
+  }
+
+  .notfound-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .notfound-link {
+    padding: 14px 12px;
+    gap: 10px;
+  }
+
+  .notfound-link span {
+    font-size: 1.5rem;
+  }
+
+  .notfound-link strong {
+    font-size: 0.82rem;
+  }
+
+  .notfound-link small {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .n4 {
+    font-size: 4rem;
+    letter-spacing: -1px;
+  }
+
+  .n0 {
+    width: 72px;
+    height: 72px;
+  }
+
+  .n0-inner {
+    font-size: 1.8rem;
+  }
+
+  .notfound-content h1 {
+    font-size: 1.4rem;
+  }
+
+  .notfound-content > p {
+    font-size: 0.85rem;
+  }
+
+  .notfound-tag {
+    font-size: 0.7rem;
+  }
+
+  .notfound-links-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .notfound-link {
+    flex-direction: column;
+    text-align: center;
+    padding: 14px 8px;
+    gap: 6px;
+  }
+
+  .notfound-link span {
+    font-size: 1.6rem;
+  }
+}

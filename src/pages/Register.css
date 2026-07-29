@@ -1,0 +1,187 @@
+@import './Login.css';
+
+/* ===== REGISTER SPECIFIQUE ===== */
+
+/* Fix navbar overlap */
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 0;
+}
+
+.auth-form-side {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 24px;
+  background-color: white;
+  overflow-y: auto;
+  min-height: calc(100vh - 72px);
+}
+
+.auth-visual {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  min-height: calc(100vh - 72px);
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Benefits */
+.register-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.9rem;
+}
+
+.benefit-check {
+  width: 24px;
+  height: 24px;
+  background-color: rgba(74,222,128,0.2);
+  border: 1.5px solid #4ade80;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Password strength */
+.password-strength {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.strength-bars {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+
+.strength-bar {
+  height: 4px;
+  flex: 1;
+  border-radius: 2px;
+  transition: background-color 0.3s;
+}
+
+.password-strength span {
+  font-size: 0.78rem;
+  font-weight: 600;
+  min-width: 40px;
+}
+
+/* Match message */
+.match-msg {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.match-msg.match {
+  color: #16a34a;
+}
+
+.match-msg.no-match {
+  color: #ef4444;
+}
+
+/* Terms */
+.terms-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.terms-check input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary);
+  margin-top: 2px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.terms-check label {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.terms-check label a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.terms-check label a:hover {
+  opacity: 0.7;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .auth-page {
+    grid-template-columns: 1fr 1.2fr;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-page {
+    grid-template-columns: 1fr;
+    padding-top: 0;
+  }
+
+  .auth-visual {
+    display: none;
+  }
+
+  .auth-form-side {
+    padding: 48px 24px;
+    min-height: 100vh;
+    align-items: flex-start;
+    padding-top: 60px;
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-form-side {
+    padding: 40px 16px;
+  }
+
+  .password-strength {
+    flex-wrap: wrap;
+  }
+
+  .terms-check label {
+    font-size: 0.78rem;
+  }
+
+  .match-msg {
+    font-size: 0.75rem;
+  }
+}

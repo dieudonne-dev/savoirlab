@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
+import logoSavoir from '../assets/savoir.png';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -11,7 +12,7 @@ function Navbar() {
         
         {/* Logo */}
         <Link to="/" className="navbar-logo">
-            <img src="/src/assets/savoir.png" alt="SavoirLab" className="logo-img" />
+            <img src={logoSavoir} alt="SavoirLab" className="logo-img" />
             <span className="logo-text">Savoir<span className="logo-accent">Lab</span></span>
         </Link>
 
